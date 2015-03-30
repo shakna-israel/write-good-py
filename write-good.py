@@ -84,4 +84,5 @@ def get_file():
             print "Except: %s" % exception
             help()
 
+# This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.
 get_file()
