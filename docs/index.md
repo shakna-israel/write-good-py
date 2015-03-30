@@ -1,160 +1,20 @@
+# ReadMe
 
-!/usr/bin/env python
+* ![Reccomended Usage Scenario](https://img.shields.io/badge/Recommended%20Use-None-red.svg)
+* ![Issues](https://img.shields.io/github/issues/shakna-israel/write-good-py.svg)
+* ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+* ![Documentation](https://img.shields.io/badge/Documentation-07f3f52ead685de93d345f16566f4f71d55b664b-lightgrey.svg)
 
-# write-good-py
+This is a Python Implementation of [Brian Ford's write-good](https://github.com/btford/write-good), a naive linter for the English language.
 
-## Inspired by Brian Ford
+This implementation is currently under heavy development and *not reccomended for use*, development or otherwise.
 
+# Why?
 
+I love [write-good](https://github.com/btford/write-good), and I use it often for both prose and documentation.
 
-This is designed as a naive linter for the English Language, using specific modules.
+In automating some documentation building, I wanted to incoroporate some automated checks, using write-good, however, as the documentation engine was Python, I wanted something of the same flavour to make everything simpler.
 
-This program is also developed in literal form, where the program is it's own documentation.
+# Documentation
 
-(Inspired by CoffeeScript Literal programs.)
-
-# Development Notes:
-
-
-
-* No Tabs used, 4 Spaces Instead
-
-* Dependencies should be as few as possible.
-
-* Unlike the original write-good, developing this project as a single script file, ala Bottle.py, is preferable.
-
-*It allows it to be a drop-in file, to get up and running inside any other project out there.*
-
-* When commenting code, the comment goes above the line that is being commented about.
-
-* Try and use a Markdown flavour of code, though beginning each line with a '#' symbol.
-
-* Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to [Issues](https://github.com/shakna-israel/write-good-py/issues)
-
-# Versioning Notes:
-
-
-
-This project was developed under Python 2.7 originally, though support for Python 3.x is incoming.
-
-But as of this commit, it remains untested.
-
-# Dependencies
-
-
-
-```import sys```
-
-```import os```
-
-Debugging tools
-
-```global verbose```
-
-```verbose = False```
-
-Print a helpful statement about arguments.
-
-```def help():```
-
-Fetch the global verbose setting, to allow for complex debugging
-
-```global verbose```
-
-Print a simple help statement of what to do.
-
-```print "./write-good.py FILENAME"```
-
-Grab a file from the commandline argument, and store it into memory:
-
-```def get_file():```
-
-Fetch the global verbose setting, to allow for complex debugging
-
-```global verbose```
-
-Check if any commandline arguments are issued to the linter.
-
-```try:```
-
-Expect the user to supply the filename as the first argument.
-
-This lets the developer integrate write-good-py into all sorts of scripting environments, and doesn't put the weight of interfacing at this end.
-
-Also means that we don't need a dozen flags. Flags are for optional things.
-
-```if sys.argv[1]:```
-
-```FILENAME = sys.argv[1]```
-
-```else:```
-
-```if verbose:```
-
-```print sys.argv[1]```
-
-Check if the argument the user has given is actually a file.
-
-```if os.path.isfile(FILENAME):```
-
-Attempt to open the file, if it fails, throw an exception.
-
-```try:```
-
-```file = open(FILENAME,"r")```
-
-For each line in the file, let's run the annotate function.
-
-```for line in file.read().split('\n'):```
-
-```annotate(file)```
-
-Close the file to remove any locks.
-
-```file.close()```
-
-```except:```
-
-```raise Exception, "File could not be opened. Do you have permissions?"```
-
-```except Exception as exception:```
-
-```print "Exception: %s" % exception```
-
-```else:```
-
-If the user has given an argument that is not a file, raise an exception for that.
-
-```try:```
-
-```raise Exception, "File either does not exist, is not a file, or you do not have permissions to the file."```
-
-```except Exception as exception:```
-
-```print "Exception: %s" % exception```
-
-```help()```
-
-If no arguments are found, then run a function for that.
-
-```except IndexError as exception:```
-
-```if verbose:```
-
-```print "Exception: %s" % exception```
-
-```help()```
-
-If any other exceptions come up, send them to the verbose system, rather than crashing on them.
-
-```except:```
-
-```if verbose:```
-
-```print "Except: %s" % exception```
-
-```help()```
-
-This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.
-
-```get_file()```
+Automatically generated from the write-good.py file, Documentation is available [here](https://shakna-israel.github.io/write-good-py/).

@@ -5,7 +5,7 @@
 # It makes use of MkDocs as it's documentation engine, though it doesn't require it to be installed.
 
 ## Notes:
-# * Docbuilder will *clobber* your docs/index.md. It just will... Unless you change the *EXPORT* variable to something else... Then it will clobber whatever that is.
+# * Docbuilder will *clobber* your docs/*FILE*. It just will... Unless you change the *EXPORT* variable to something else... Then it will clobber whatever that is.
 # * Docbuilder won't generate a *mkdocs.yml* file for you. You'll need to either make one, or just use ``` mkdocs new . ``` in your current folder.
 # * Docbuilder has no dependencies, except those that come with Python 2.7. (Previous versions of Python probably need some modifications to work. Python 3.x also will need some modification.)
 # * Docbuilder simply converts your comments and code into Markdown, and mkdocs can serve or build that for you.
@@ -19,7 +19,7 @@ import sys
 # The *FILE* variable tells Docbuilder what file it should build documentation from.
 FILE = "write-good.py"
 # The *EXPORT* variable tells Docbuilder what file it should build documentation into.
-EXPORT = "docs/index.md"
+EXPORT = "docs/write-good-py.md"
 # Instantiate the string variable, which is used by Docbuilder to read and write files.
 string = "Unset"
 # Check if the *EXPORT* file exists:
