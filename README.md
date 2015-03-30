@@ -1,9 +1,9 @@
 # ReadMe
 
-![Reccomended Usage Scenario](https://img.shields.io/badge/Recommended%20Use-None-red.svg)
-![Issues](https://img.shields.io/github/issues/shakna-israel/write-good-py.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Documentation](https://img.shields.io/badge/Documentation-07f3f52ead685de93d345f16566f4f71d55b664b-lightgrey.svg)
+* ![Reccomended Usage Scenario](https://img.shields.io/badge/Recommended%20Use-None-red.svg)
+* ![Issues](https://img.shields.io/github/issues/shakna-israel/write-good-py.svg)
+* ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+* ![Documentation](https://img.shields.io/badge/Documentation-07f3f52ead685de93d345f16566f4f71d55b664b-lightgrey.svg)
 
 This is a Python Implementation of [Brian Ford's write-good](https://github.com/btford/write-good), a naive linter for the English language.
 
