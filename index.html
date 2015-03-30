@@ -70,97 +70,85 @@
 </div>
           <div role="main">
             <div class="section">
-              <p>!/usr/bin/env python</p>
-<h1 id="write-good-py">write-good-py</h1>
-<h2 id="inspired-by-brian-ford">Inspired by Brian Ford</h2>
-<p>This is designed as a naive linter for the English Language, using specific modules.</p>
-<p>This program is also developed in literal form, where the program is it's own documentation.</p>
-<p>(Inspired by CoffeeScript Literal programs.)</p>
-<h1 id="development-notes">Development Notes:</h1>
-<ul>
-<li>
-<p>No Tabs used, 4 Spaces Instead</p>
-</li>
-<li>
-<p>Dependencies should be as few as possible.</p>
-</li>
-<li>
-<p>Unlike the original write-good, developing this project as a single script file, ala Bottle.py, is preferable.</p>
-</li>
-<li>
-<p>It allows it to be a drop-in file, to get up and running inside any other project out there.</p>
-</li>
-<li>
-<p>When commenting code, the comment goes above the line that is being commented about.</p>
-</li>
-<li>
-<p>Try and use a Markdown flavour of code, though beginning each line with a '#' symbol.</p>
-</li>
-<li>
-<p>Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to <a href="https://github.com/shakna-israel/write-good-py">Issues</a></p>
-</li>
-</ul>
-<h1 id="versioning-notes">Versioning Notes:</h1>
-<p>This project was developed under Python 2.7 originally, though support for Python 3.x is incoming.</p>
-<p>But as of this commit, it remains untested.</p>
-<p>Dependencies</p>
+              <h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
 <p><code>import sys</code></p>
 <p><code>import os</code></p>
-<p>Debugging tools</p>
+<h1></h1>
 <p><code>global verbose</code></p>
 <p><code>verbose = False</code></p>
-<p>Print a helpful statement about arguments.</p>
+<h1></h1>
 <p><code>def help():</code></p>
-<h1 id="fetch-the-global-verbose-setting-to-allow-for-complex-debugging">Fetch the global verbose setting, to allow for complex debugging</h1>
+<h1></h1>
 <p><code>global verbose</code></p>
-<h1 id="print-a-simple-help-statement-of-what-to-do">Print a simple help statement of what to do.</h1>
+<h1></h1>
 <p><code>print "./write-good.py FILENAME"</code></p>
-<p>Grab a file from the commandline argument, and store it into memory:</p>
+<h1></h1>
 <p><code>def get_file():</code></p>
-<h1 id="fetch-the-global-verbose-setting-to-allow-for-complex-debugging_1">Fetch the global verbose setting, to allow for complex debugging</h1>
+<h1></h1>
 <p><code>global verbose</code></p>
-<h1 id="check-if-any-commandline-arguments-are-issued-to-the-linter">Check if any commandline arguments are issued to the linter.</h1>
+<h1></h1>
 <p><code>try:</code></p>
-<h1 id="expect-the-user-to-supply-the-filename-as-the-first-argument">Expect the user to supply the filename as the first argument.</h1>
-<h1 id="this-lets-the-developer-integrate-write-good-py-into-all-sorts-of-scripting-environments-and-doesnt-put-the-weight-of-interfacing-at-this-end">This lets the developer integrate write-good-py into all sorts of scripting environments, and doesn't put the weight of interfacing at this end.</h1>
-<h1 id="also-means-that-we-dont-need-a-dozen-flags-flags-are-for-optional-things">Also means that we don't need a dozen flags. Flags are for optional things.</h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
 <p><code>if sys.argv[1]:</code></p>
 <p><code>FILENAME = sys.argv[1]</code></p>
 <p><code>else:</code></p>
 <p><code>if verbose:</code></p>
 <p><code>print sys.argv[1]</code></p>
-<h1 id="check-if-the-argument-the-user-has-given-is-actually-a-file">Check if the argument the user has given is actually a file.</h1>
+<h1></h1>
 <p><code>if os.path.isfile(FILENAME):</code></p>
-<h1 id="attempt-to-open-the-file-if-it-fails-throw-an-exception">Attempt to open the file, if it fails, throw an exception.</h1>
+<h1></h1>
 <p><code>try:</code></p>
 <p><code>file = open(FILENAME,"r")</code></p>
-<h1 id="for-each-line-in-the-file-lets-run-the-annotate-function">For each line in the file, let's run the annotate function.</h1>
+<h1></h1>
 <p><code>for line in file.read().split('\n'):</code></p>
 <p><code>annotate(file)</code></p>
-<h1 id="close-the-file-to-remove-any-locks">Close the file to remove any locks.</h1>
+<h1></h1>
 <p><code>file.close()</code></p>
 <p><code>except:</code></p>
 <p><code>raise Exception, "File could not be opened. Do you have permissions?"</code></p>
 <p><code>except Exception as exception:</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>else:</code></p>
-<h1 id="if-the-user-has-given-an-argument-that-is-not-a-file-raise-an-exception-for-that">If the user has given an argument that is not a file, raise an exception for that.</h1>
+<h1></h1>
 <p><code>try:</code></p>
 <p><code>raise Exception, "File either does not exist, is not a file, or you do not have permissions to the file."</code></p>
 <p><code>except Exception as exception:</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>help()</code></p>
-<h1 id="if-no-arguments-are-found-then-run-a-function-for-that">If no arguments are found, then run a function for that.</h1>
+<h1></h1>
 <p><code>except IndexError as exception:</code></p>
 <p><code>if verbose:</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>help()</code></p>
-<h1 id="if-any-other-exceptions-come-up-send-them-to-the-verbose-system-rather-than-crashing-on-them">If any other exceptions come up, send them to the verbose system, rather than crashing on them.</h1>
+<h1></h1>
 <p><code>except:</code></p>
 <p><code>if verbose:</code></p>
 <p><code>print "Except: %s" % exception</code></p>
 <p><code>help()</code></p>
-<p>This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.</p>
+<h1></h1>
 <p><code>get_file()</code></p>
 
             </div>
