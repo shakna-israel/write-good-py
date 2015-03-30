@@ -23,13 +23,13 @@ This program is also developed in literal form, where the program is it's own do
 
 * Unlike the original write-good, developing this project as a single script file, ala Bottle.py, is preferable.
 
-* It allows it to be a drop-in file, to get up and running inside any other project out there.
+*It allows it to be a drop-in file, to get up and running inside any other project out there.*
 
 * When commenting code, the comment goes above the line that is being commented about.
 
 * Try and use a Markdown flavour of code, though beginning each line with a '#' symbol.
 
-* Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to [Issues](https://github.com/shakna-israel/write-good-py)
+* Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to [Issues](https://github.com/shakna-israel/write-good-py/issues)
 
 # Versioning Notes:
 
@@ -39,7 +39,7 @@ This project was developed under Python 2.7 originally, though support for Pytho
 
 But as of this commit, it remains untested.
 
-Dependencies
+# Dependencies
 
 
 
