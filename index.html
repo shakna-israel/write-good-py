@@ -48,6 +48,13 @@
         
 
     
+        
+            <li class="toctree-l1 ">
+                <a class="" href="write-good-py/">Write good py</a>
+            </li>
+        
+
+    
 </ul>
 
       </div>
@@ -81,98 +88,20 @@
 </div>
           <div role="main">
             <div class="section">
-              <p>!/usr/bin/env python</p>
-<h1 id="write-good-py">write-good-py</h1>
-<h2 id="inspired-by-brian-ford">Inspired by Brian Ford</h2>
-<p>This is designed as a naive linter for the English Language, using specific modules.</p>
-<p>This program is also developed in literal form, where the program is it's own documentation.</p>
-<p>(Inspired by CoffeeScript Literal programs.)</p>
-<h1 id="development-notes">Development Notes:</h1>
+              <h1 id="readme">ReadMe</h1>
 <ul>
-<li>
-<p>No Tabs used, 4 Spaces Instead</p>
-</li>
-<li>
-<p>Dependencies should be as few as possible.</p>
-</li>
-<li>
-<p>Unlike the original write-good, developing this project as a single script file, ala Bottle.py, is preferable.</p>
-</li>
+<li><img alt="Reccomended Usage Scenario" src="https://img.shields.io/badge/Recommended%20Use-None-red.svg" /></li>
+<li><img alt="Issues" src="https://img.shields.io/github/issues/shakna-israel/write-good-py.svg" /></li>
+<li><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" /></li>
+<li><img alt="Documentation" src="https://img.shields.io/badge/Documentation-07f3f52ead685de93d345f16566f4f71d55b664b-lightgrey.svg" /></li>
 </ul>
-<p><em>It allows it to be a drop-in file, to get up and running inside any other project out there.</em></p>
-<ul>
-<li>
-<p>When commenting code, the comment goes above the line that is being commented about.</p>
-</li>
-<li>
-<p>Try and use a Markdown flavour of code, though beginning each line with a '#' symbol.</p>
-</li>
-<li>
-<p>Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to <a href="https://github.com/shakna-israel/write-good-py/issues">Issues</a></p>
-</li>
-</ul>
-<h1 id="versioning-notes">Versioning Notes:</h1>
-<p>This project was developed under Python 2.7 originally, though support for Python 3.x is incoming.</p>
-<p>But as of this commit, it remains untested.</p>
-<h1 id="dependencies">Dependencies</h1>
-<p><code>import sys</code></p>
-<p><code>import os</code></p>
-<p>Debugging tools</p>
-<p><code>global verbose</code></p>
-<p><code>verbose = False</code></p>
-<p>Print a helpful statement about arguments.</p>
-<p><code>def help():</code></p>
-<p>Fetch the global verbose setting, to allow for complex debugging</p>
-<p><code>global verbose</code></p>
-<p>Print a simple help statement of what to do.</p>
-<p><code>print "./write-good.py FILENAME"</code></p>
-<p>Grab a file from the commandline argument, and store it into memory:</p>
-<p><code>def get_file():</code></p>
-<p>Fetch the global verbose setting, to allow for complex debugging</p>
-<p><code>global verbose</code></p>
-<p>Check if any commandline arguments are issued to the linter.</p>
-<p><code>try:</code></p>
-<p>Expect the user to supply the filename as the first argument.</p>
-<p>This lets the developer integrate write-good-py into all sorts of scripting environments, and doesn't put the weight of interfacing at this end.</p>
-<p>Also means that we don't need a dozen flags. Flags are for optional things.</p>
-<p><code>if sys.argv[1]:</code></p>
-<p><code>FILENAME = sys.argv[1]</code></p>
-<p><code>else:</code></p>
-<p><code>if verbose:</code></p>
-<p><code>print sys.argv[1]</code></p>
-<p>Check if the argument the user has given is actually a file.</p>
-<p><code>if os.path.isfile(FILENAME):</code></p>
-<p>Attempt to open the file, if it fails, throw an exception.</p>
-<p><code>try:</code></p>
-<p><code>file = open(FILENAME,"r")</code></p>
-<p>For each line in the file, let's run the annotate function.</p>
-<p><code>for line in file.read().split('\n'):</code></p>
-<p><code>annotate(file)</code></p>
-<p>Close the file to remove any locks.</p>
-<p><code>file.close()</code></p>
-<p><code>except:</code></p>
-<p><code>raise Exception, "File could not be opened. Do you have permissions?"</code></p>
-<p><code>except Exception as exception:</code></p>
-<p><code>print "Exception: %s" % exception</code></p>
-<p><code>else:</code></p>
-<p>If the user has given an argument that is not a file, raise an exception for that.</p>
-<p><code>try:</code></p>
-<p><code>raise Exception, "File either does not exist, is not a file, or you do not have permissions to the file."</code></p>
-<p><code>except Exception as exception:</code></p>
-<p><code>print "Exception: %s" % exception</code></p>
-<p><code>help()</code></p>
-<p>If no arguments are found, then run a function for that.</p>
-<p><code>except IndexError as exception:</code></p>
-<p><code>if verbose:</code></p>
-<p><code>print "Exception: %s" % exception</code></p>
-<p><code>help()</code></p>
-<p>If any other exceptions come up, send them to the verbose system, rather than crashing on them.</p>
-<p><code>except:</code></p>
-<p><code>if verbose:</code></p>
-<p><code>print "Except: %s" % exception</code></p>
-<p><code>help()</code></p>
-<p>This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.</p>
-<p><code>get_file()</code></p>
+<p>This is a Python Implementation of <a href="https://github.com/btford/write-good">Brian Ford's write-good</a>, a naive linter for the English language.</p>
+<p>This implementation is currently under heavy development and <em>not reccomended for use</em>, development or otherwise.</p>
+<h1 id="why">Why?</h1>
+<p>I love <a href="https://github.com/btford/write-good">write-good</a>, and I use it often for both prose and documentation.</p>
+<p>In automating some documentation building, I wanted to incoroporate some automated checks, using write-good, however, as the documentation engine was Python, I wanted something of the same flavour to make everything simpler.</p>
+<h1 id="documentation">Documentation</h1>
+<p>Automatically generated from the write-good.py file, Documentation is available <a href="https://shakna-israel.github.io/write-good-py/">here</a>.</p>
 
             </div>
           </div>
