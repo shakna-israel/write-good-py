@@ -70,85 +70,97 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
+              <p>!/usr/bin/env python</p>
+<p># write-good-py</p>
+<p>## Inspired by Brian Ford</p>
+<p>This is designed as a naive linter for the English Language, using specific modules.</p>
+<p>This program is also developed in literal form, where the program is it's own documentation.</p>
+<p>(Inspired by CoffeeScript Literal programs.)</p>
+<p># Development Notes:</p>
+<ul>
+<li>
+<p>No Tabs used, 4 Spaces Instead</p>
+</li>
+<li>
+<p>Dependencies should be as few as possible.</p>
+</li>
+<li>
+<p>Unlike the original write-good, developing this project as a single script file, ala Bottle.py, is preferable.</p>
+<ul>
+<li>It allows it to be a drop-in file, to get up and running inside any other project out there.</li>
+</ul>
+</li>
+<li>
+<p>When commenting code, the comment goes above the line that is being commented about.</p>
+</li>
+<li>
+<p>Try and use a Markdown flavour of code, though beginning each line with a '#' symbol.</p>
+</li>
+<li>
+<p>Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to <a href="https://github.com/shakna-israel/write-good-py">Issues</a></p>
+</li>
+</ul>
+<p># Versioning Notes:</p>
+<p>This project was developed under Python 2.7 originally, though support for Python 3.x is incoming.</p>
+<p>But as of this commit, it remains untested.</p>
+<p>Dependencies</p>
 <p><code>import sys</code></p>
 <p><code>import os</code></p>
-<h1></h1>
+<p>Debugging tools</p>
 <p><code>global verbose</code></p>
 <p><code>verbose = False</code></p>
-<h1></h1>
+<p>Print a helpful statement about arguments.</p>
 <p><code>def help():</code></p>
-<h1></h1>
+<p>Fetch the global verbose setting, to allow for complex debugging</p>
 <p><code>global verbose</code></p>
-<h1></h1>
+<p>Print a simple help statement of what to do.</p>
 <p><code>print "./write-good.py FILENAME"</code></p>
-<h1></h1>
+<p>Grab a file from the commandline argument, and store it into memory:</p>
 <p><code>def get_file():</code></p>
-<h1></h1>
+<p>Fetch the global verbose setting, to allow for complex debugging</p>
 <p><code>global verbose</code></p>
-<h1></h1>
+<p>Check if any commandline arguments are issued to the linter.</p>
 <p><code>try:</code></p>
-<h1></h1>
-<h1></h1>
-<h1></h1>
+<p>Expect the user to supply the filename as the first argument.</p>
+<p>This lets the developer integrate write-good-py into all sorts of scripting environments, and doesn't put the weight of interfacing at this end.</p>
+<p>Also means that we don't need a dozen flags. Flags are for optional things.</p>
 <p><code>if sys.argv[1]:</code></p>
 <p><code>FILENAME = sys.argv[1]</code></p>
 <p><code>else:</code></p>
 <p><code>if verbose:</code></p>
 <p><code>print sys.argv[1]</code></p>
-<h1></h1>
+<p>Check if the argument the user has given is actually a file.</p>
 <p><code>if os.path.isfile(FILENAME):</code></p>
-<h1></h1>
+<p>Attempt to open the file, if it fails, throw an exception.</p>
 <p><code>try:</code></p>
 <p><code>file = open(FILENAME,"r")</code></p>
-<h1></h1>
+<p>For each line in the file, let's run the annotate function.</p>
 <p><code>for line in file.read().split('\n'):</code></p>
 <p><code>annotate(file)</code></p>
-<h1></h1>
+<p>Close the file to remove any locks.</p>
 <p><code>file.close()</code></p>
 <p><code>except:</code></p>
 <p><code>raise Exception, "File could not be opened. Do you have permissions?"</code></p>
 <p><code>except Exception as exception:</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>else:</code></p>
-<h1></h1>
+<p>If the user has given an argument that is not a file, raise an exception for that.</p>
 <p><code>try:</code></p>
 <p><code>raise Exception, "File either does not exist, is not a file, or you do not have permissions to the file."</code></p>
 <p><code>except Exception as exception:</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>help()</code></p>
-<h1></h1>
+<p>If no arguments are found, then run a function for that.</p>
 <p><code>except IndexError as exception:</code></p>
 <p><code>if verbose:</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>help()</code></p>
-<h1></h1>
+<p>If any other exceptions come up, send them to the verbose system, rather than crashing on them.</p>
 <p><code>except:</code></p>
 <p><code>if verbose:</code></p>
 <p><code>print "Except: %s" % exception</code></p>
 <p><code>help()</code></p>
-<h1></h1>
+<p>This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.</p>
 <p><code>get_file()</code></p>
 
             </div>
