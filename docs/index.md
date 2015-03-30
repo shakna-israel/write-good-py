@@ -1,11 +1,9 @@
 
 !/usr/bin/env python
 
-``````
+ # write-good-py
 
- write-good-py
-
- Inspired by Brian Ford
+ ## Inspired by Brian Ford
 
 
 
@@ -15,9 +13,7 @@
 
  (Inspired by CoffeeScript Literal programs.)
 
-``````
-
- Development Notes:
+ # Development Notes:
 
 
 
@@ -35,17 +31,13 @@
 
  * Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to [Issues](https://github.com/shakna-israel/write-good-py)
 
-``````
-
- Versioning Notes:
+ # Versioning Notes:
 
 
 
  This project was developed under Python 2.7 originally, though support for Python 3.x is incoming.
 
  But as of this commit, it remains untested.
-
-``````
 
  Dependencies
 
@@ -55,15 +47,11 @@
 
 ```import os```
 
-``````
-
  Debugging tools
 
 ```global verbose```
 
 ```verbose = False```
-
-``````
 
  Print a helpful statement about arguments.
 
@@ -76,8 +64,6 @@
    # Print a simple help statement of what to do.
 
 ```print "./write-good.py FILENAME"```
-
-``````
 
  Grab a file from the commandline argument, and store it into memory:
 
@@ -169,10 +155,6 @@
 
 ```help()```
 
-``````
-
  This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.
 
 ```get_file()```
-
-``````

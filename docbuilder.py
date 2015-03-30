@@ -20,10 +20,11 @@ for line in file.read().split('\n'):
         outfile.write(string)
         outfile.write("\n")
     else:
-        outfile.write("\n")
-        outfile.write("```")
-        outfile.write(string)
-        outfile.write("```")
-        outfile.write("\n")
+        if string != "":
+            outfile.write("\n")
+            outfile.write("```")
+            outfile.write(string)
+            outfile.write("```")
+            outfile.write("\n")
 file.close()
 outfile.close()

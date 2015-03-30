@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-# write-good-py
-# Inspired by Brian Ford
+# # write-good-py
+# ## Inspired by Brian Ford
 #
 # This is designed as a naive linter for the English Language, using specific modules.
 # This program is also developed in literal form, where the program is it's own documentation.
 # (Inspired by CoffeeScript Literal programs.)
 
-# Development Notes:
+# # Development Notes:
 #
 # * No Tabs used, 4 Spaces Instead
 # * Dependencies should be as few as possible.
@@ -17,7 +17,7 @@
 # * Try and use a Markdown flavour of code, though beginning each line with a '#' symbol.
 # * Flags should only be utilised for functions that are optional to the core function. (If in doubt, go to [Issues](https://github.com/shakna-israel/write-good-py)
 
-# Versioning Notes:
+# # Versioning Notes:
 #
 # This project was developed under Python 2.7 originally, though support for Python 3.x is incoming.
 # But as of this commit, it remains untested.
