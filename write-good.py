@@ -54,11 +54,22 @@ def get_file():
                 print sys.argv[1]
         # Check if the argument the user has given is actually a file.
         if os.path.isfile(FILENAME):
-            print "File found"
+            # Attempt to open the file, if it fails, throw an exception.
+            try:
+                file = open(FILENAME,"r")
+                # For each line in the file, let's run the annotate function.
+                for line in file.read().split('\n'):
+                    annotate(file)
+                # Close the file to remove any locks.
+                file.close()
+            except:
+                raise Exception, "File could not be opened. Do you have permissions?"
+            except Exception as exception:
+                print "Exception: %s" % exception
         else:
             # If the user has given an argument that is not a file, raise an exception for that.
             try:
-                raise Exception, "File either does not exist, or is not a file."
+                raise Exception, "File either does not exist, is not a file, or you do not have permissions to the file."
             except Exception as exception:
                 print "Exception: %s" % exception
                 help()
