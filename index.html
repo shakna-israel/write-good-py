@@ -1,115 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>write-good-py</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> write-good-py</a>
         
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    <li>Home</li>
+      <li class="wy-breadcrumbs-aside">
         
-        
-        <link rel="shortcut icon" href="./img/favicon.ico">
-
-        <title>My Docs</title>
-
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        
-    </head>
-
-    <body class="homepage">
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            
-
-            <!-- Main title -->
-            <a class="navbar-brand" href=".">My Docs</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-            
-
-            
-        </div>
-    </div>
+      </li>
+  </ul>
+  <hr/>
 </div>
-
-        <div class="container">
-            
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-    
-        <li class="main active"><a href="#write-good-py">write-good-py</a></li>
-        
-            <li><a href="#inspired-by-brian-ford">Inspired by Brian Ford</a></li>
-        
-    
-        <li class="main "><a href="#development-notes">Development Notes:</a></li>
-        
-    
-        <li class="main "><a href="#versioning-notes">Versioning Notes:</a></li>
-        
-    
-        <li class="main "><a href="#fetch-the-global-verbose-setting-to-allow-for-complex-debugging">Fetch the global verbose setting, to allow for complex debugging</a></li>
-        
-    
-        <li class="main "><a href="#print-a-simple-help-statement-of-what-to-do">Print a simple help statement of what to do.</a></li>
-        
-    
-        <li class="main "><a href="#fetch-the-global-verbose-setting-to-allow-for-complex-debugging_1">Fetch the global verbose setting, to allow for complex debugging</a></li>
-        
-    
-        <li class="main "><a href="#check-if-any-commandline-arguments-are-issued-to-the-linter">Check if any commandline arguments are issued to the linter.</a></li>
-        
-    
-        <li class="main "><a href="#expect-the-user-to-supply-the-filename-as-the-first-argument">Expect the user to supply the filename as the first argument.</a></li>
-        
-    
-        <li class="main "><a href="#this-lets-the-developer-integrate-write-good-py-into-all-sorts-of-scripting-environments-and-doesnt-put-the-weight-of-interfacing-at-this-end">This lets the developer integrate write-good-py into all sorts of scripting environments, and doesn't put the weight of interfacing at this end.</a></li>
-        
-    
-        <li class="main "><a href="#also-means-that-we-dont-need-a-dozen-flags-flags-are-for-optional-things">Also means that we don't need a dozen flags. Flags are for optional things.</a></li>
-        
-    
-        <li class="main "><a href="#check-if-the-argument-the-user-has-given-is-actually-a-file">Check if the argument the user has given is actually a file.</a></li>
-        
-    
-        <li class="main "><a href="#attempt-to-open-the-file-if-it-fails-throw-an-exception">Attempt to open the file, if it fails, throw an exception.</a></li>
-        
-    
-        <li class="main "><a href="#for-each-line-in-the-file-lets-run-the-annotate-function">For each line in the file, let's run the annotate function.</a></li>
-        
-    
-        <li class="main "><a href="#close-the-file-to-remove-any-locks">Close the file to remove any locks.</a></li>
-        
-    
-        <li class="main "><a href="#if-the-user-has-given-an-argument-that-is-not-a-file-raise-an-exception-for-that">If the user has given an argument that is not a file, raise an exception for that.</a></li>
-        
-    
-        <li class="main "><a href="#if-no-arguments-are-found-then-run-a-function-for-that">If no arguments are found, then run a function for that.</a></li>
-        
-    
-        <li class="main "><a href="#if-any-other-exceptions-come-up-send-them-to-the-verbose-system-rather-than-crashing-on-them">If any other exceptions come up, send them to the verbose system, rather than crashing on them.</a></li>
-        
-    
-    </ul>
-</div></div>
-                <div class="col-md-9" role="main">
-
-<p>!/usr/bin/env python</p>
+          <div role="main">
+            <div class="section">
+              <p>!/usr/bin/env python</p>
 <h1 id="write-good-py">write-good-py</h1>
 <h2 id="inspired-by-brian-ford">Inspired by Brian Ford</h2>
 <p>This is designed as a naive linter for the English Language, using specific modules.</p>
@@ -201,22 +162,36 @@
 <p><code>help()</code></p>
 <p>This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.</p>
 <p><code>get_file()</code></p>
-</div>
-            
+
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
         </div>
+      </div>
 
-        <footer class="col-md-12">
-            <hr>
-            
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
+    </section>
 
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
         
-
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/prettify-1.0.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script src="./js/base.js"></script>
-    </body>
+      <span><a href="" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+</body>
 </html>
