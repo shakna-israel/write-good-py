@@ -15,8 +15,8 @@ for line in file.read().split('\n'):
     string = string.strip()
     char = string[:1]
     if char == u'\u0023':
-        string = line.strip()
-        string = string[:1]
+        string = string.strip()
+        string = string[1:]
         outfile.write("\n")
         outfile.write(string)
         outfile.write("\n")
