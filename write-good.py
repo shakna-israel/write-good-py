@@ -31,13 +31,32 @@ import os
 global verbose
 verbose = False
 
+# Check if verbose enabled
+def check_verbose():
+    global verbose
+    # Try and see if a flag exists
+    try:
+        # If a flag exists, and is *-v*
+        if sys.argv[2] == "-v":
+            # Make Verbose Mode True.
+            verbose = True
+            # If we're in verbose mode, enable it.
+            if verbose == True:
+                print "Verbose mode enabled."
+        else:
+            # If the flag isn't *-v*, set Verbose Mode to disabled.
+            verbose = False
+    except:
+        # If there is no flag, set Verbose Mode to disabled.
+        verbose = False
+
 # Print a helpful statement about arguments.
 def help():
     # Fetch the global verbose setting, to allow for complex debugging
     global verbose
     # Print a simple help statement of what to do.
-    print "./write-good.py FILENAME"
-
+    print "./write-good.py FILENAME -FLAG"
+    print "-v is Verbose Mode"
 # Grab a file from the commandline argument, and store it into memory:
 def get_file():
     # Fetch the global verbose setting, to allow for complex debugging
@@ -62,9 +81,8 @@ def get_file():
                     annotate(file)
                 # Close the file to remove any locks.
                 file.close()
-            except:
-                raise Exception, "File could not be opened. Do you have permissions?"
             except Exception as exception:
+                raise Exception, "File could not be opened. Do you have permissions?"
                 print "Exception: %s" % exception
         else:
             # If the user has given an argument that is not a file, raise an exception for that.
@@ -85,4 +103,5 @@ def get_file():
             help()
 
 # This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.
+check_verbose()
 get_file()
