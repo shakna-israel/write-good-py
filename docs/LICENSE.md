@@ -2,7 +2,7 @@ The MIT License (MIT)
 
 Copyright (c) 2015 James Milne
 
-This license refers only to the write-good-py implementation. 
+This license refers only to the write-good-py implementation, and the docbuilder system. 
 The original implementation is held under it's own copyright and license, 
 found in [btford/LICENSE](btford/LICENSE)
 
