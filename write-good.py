@@ -57,6 +57,7 @@ def help():
     # Print a simple help statement of what to do.
     print "./write-good.py FILENAME -FLAG"
     print "-v is Verbose Mode"
+
 # Grab a file from the commandline argument, and store it into memory:
 def get_file():
     # Fetch the global verbose setting, to allow for complex debugging
@@ -78,7 +79,8 @@ def get_file():
                 file = open(FILENAME,"r")
                 # For each line in the file, let's run the annotate function.
                 for line in file.read().split('\n'):
-                    annotate(file)
+                    # Send each line to the ```annotate``` function.
+                    annotate(line)
                 # Close the file to remove any locks.
                 file.close()
             except Exception as exception:
@@ -101,6 +103,10 @@ def get_file():
         if verbose:
             print "Except: %s" % exception
             help()
+
+# This is the annotate function, it takes the file read in by ```get_file()```, and sends it to any existing modules for analysis, and then outputs it.
+def annotate(line):
+    print "Placeholder"
 
 # This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.
 check_verbose()

@@ -53,6 +53,42 @@ Debugging tools
 
 ```verbose = False```
 
+Check if verbose enabled
+
+```def check_verbose():```
+
+```global verbose```
+
+Try and see if a flag exists
+
+```try:```
+
+If a flag exists, and is *-v*
+
+```if sys.argv[2] == "-v":```
+
+Make Verbose Mode True.
+
+```verbose = True```
+
+If we're in verbose mode, enable it.
+
+```if verbose == True:```
+
+```print "Verbose mode enabled."```
+
+```else:```
+
+If the flag isn't *-v*, set Verbose Mode to disabled.
+
+```verbose = False```
+
+```except:```
+
+If there is no flag, set Verbose Mode to disabled.
+
+```verbose = False```
+
 Print a helpful statement about arguments.
 
 ```def help():```
@@ -63,7 +99,9 @@ Fetch the global verbose setting, to allow for complex debugging
 
 Print a simple help statement of what to do.
 
-```print "./write-good.py FILENAME"```
+```print "./write-good.py FILENAME -FLAG"```
+
+```print "-v is Verbose Mode"```
 
 Grab a file from the commandline argument, and store it into memory:
 
@@ -107,17 +145,17 @@ For each line in the file, let's run the annotate function.
 
 ```for line in file.read().split('\n'):```
 
-```annotate(file)```
+Send each line to the ```annotate``` function.
+
+```annotate(line)```
 
 Close the file to remove any locks.
 
 ```file.close()```
 
-```except:```
+```except Exception as exception:```
 
 ```raise Exception, "File could not be opened. Do you have permissions?"```
-
-```except Exception as exception:```
 
 ```print "Exception: %s" % exception```
 
@@ -155,6 +193,14 @@ If any other exceptions come up, send them to the verbose system, rather than cr
 
 ```help()```
 
+This is the annotate function, it takes the file read in by ```get_file()```, and sends it to any existing modules for analysis, and then outputs it.
+
+```def annotate(line):```
+
+```print "Placeholder"```
+
 This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.
+
+```check_verbose()```
 
 ```get_file()```
