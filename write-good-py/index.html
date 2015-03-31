@@ -145,12 +145,31 @@
 <p>Debugging tools</p>
 <p><code>global verbose</code></p>
 <p><code>verbose = False</code></p>
+<p>Check if verbose enabled</p>
+<p><code>def check_verbose():</code></p>
+<p><code>global verbose</code></p>
+<p>Try and see if a flag exists</p>
+<p><code>try:</code></p>
+<p>If a flag exists, and is <em>-v</em></p>
+<p><code>if sys.argv[2] == "-v":</code></p>
+<p>Make Verbose Mode True.</p>
+<p><code>verbose = True</code></p>
+<p>If we're in verbose mode, enable it.</p>
+<p><code>if verbose == True:</code></p>
+<p><code>print "Verbose mode enabled."</code></p>
+<p><code>else:</code></p>
+<p>If the flag isn't <em>-v</em>, set Verbose Mode to disabled.</p>
+<p><code>verbose = False</code></p>
+<p><code>except:</code></p>
+<p>If there is no flag, set Verbose Mode to disabled.</p>
+<p><code>verbose = False</code></p>
 <p>Print a helpful statement about arguments.</p>
 <p><code>def help():</code></p>
 <p>Fetch the global verbose setting, to allow for complex debugging</p>
 <p><code>global verbose</code></p>
 <p>Print a simple help statement of what to do.</p>
-<p><code>print "./write-good.py FILENAME"</code></p>
+<p><code>print "./write-good.py FILENAME -FLAG"</code></p>
+<p><code>print "-v is Verbose Mode"</code></p>
 <p>Grab a file from the commandline argument, and store it into memory:</p>
 <p><code>def get_file():</code></p>
 <p>Fetch the global verbose setting, to allow for complex debugging</p>
@@ -172,12 +191,12 @@
 <p><code>file = open(FILENAME,"r")</code></p>
 <p>For each line in the file, let's run the annotate function.</p>
 <p><code>for line in file.read().split('\n'):</code></p>
-<p><code>annotate(file)</code></p>
+<p>Send each line to the <code>annotate</code> function.</p>
+<p><code>annotate(line)</code></p>
 <p>Close the file to remove any locks.</p>
 <p><code>file.close()</code></p>
-<p><code>except:</code></p>
-<p><code>raise Exception, "File could not be opened. Do you have permissions?"</code></p>
 <p><code>except Exception as exception:</code></p>
+<p><code>raise Exception, "File could not be opened. Do you have permissions?"</code></p>
 <p><code>print "Exception: %s" % exception</code></p>
 <p><code>else:</code></p>
 <p>If the user has given an argument that is not a file, raise an exception for that.</p>
@@ -196,7 +215,11 @@
 <p><code>if verbose:</code></p>
 <p><code>print "Except: %s" % exception</code></p>
 <p><code>help()</code></p>
+<p>This is the annotate function, it takes the file read in by <code>get_file()</code>, and sends it to any existing modules for analysis, and then outputs it.</p>
+<p><code>def annotate(line):</code></p>
+<p><code>print "Placeholder"</code></p>
 <p>This is not the final function. This program will have a main function, and that will be the final function to handle everything and which way to take things. It's just for testing.</p>
+<p><code>check_verbose()</code></p>
 <p><code>get_file()</code></p>
 
             </div>
