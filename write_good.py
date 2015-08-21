@@ -1,9 +1,13 @@
 import argparse
+import sys
 
 def get_cli_flags():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", help="The input file. Hopefully plain text.")
     parser.add_argument("-o", "--output", help="An output file to generate.")
+    if len(sys.argv)==1:
+        parser.print_help()
+        sys.exit(1)
     cliArgs = parser.parse_args()
     if cliArgs.input:
         inFile = cliArgs.input
