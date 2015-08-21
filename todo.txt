@@ -1,0 +1,2 @@
+(A) 2015-08-22 Handle blank strings
+(A) 2015-08-22 Optionally disable each check
