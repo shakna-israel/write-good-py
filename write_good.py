@@ -2,7 +2,7 @@ import argparse
 import sys
 
 def get_cli_flags():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='WriteGoodPy - naive grammar linter')
     parser.add_argument("-i", "--input", help="(REQUIRED) The input file. Hopefully plain text.")
     parser.add_argument("-o", "--output", help="(OPTIONAL) An output file to generate.")
     if len(sys.argv)==1:
