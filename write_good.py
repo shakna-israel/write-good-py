@@ -13,6 +13,7 @@ def get_cli_flags():
     parser.add_argument("-da", "--disable-adverb", help="(OPTIONAL) Disable checking for words that may weaken meaning.", action="store_true")
     parser.add_argument("-dwo", "--disable-wordy", help="(OPTIONAL) Disable checking for wordiness.", action="store_true")
     parser.add_argument("-dc", "--disable-cliches", help="(OPTIONAL) Disable checking for cliches.", action="store_true")
+    parser.add_argument("-df", "--disable-frankenword", help="(OPTIONAL) Disable checking for frankenwords.", action="store_true")
     if len(sys.argv)==1:
         parser.print_help()
         sys.exit(1)
@@ -57,7 +58,11 @@ def get_cli_flags():
         disable_cliches = True
     else:
         disable_cliches = False
-    return { "inFile": inFile, "outFile": outFile, "disable_passive": disable_passive, "disable_illusion": disable_illusion, "disable_so": disable_so, "disable_there": disable_there, "disable_weasel": disable_weasel, "disable_adverb": disable_adverb, "disable_wordy": disable_wordy, "disable_cliches": disable_cliches }
+    if cliArgs.disable_frankenword:
+        disable_frankenword = True
+    else:
+        disable_frankenword = False
+    return { "inFile": inFile, "outFile": outFile, "disable_passive": disable_passive, "disable_illusion": disable_illusion, "disable_so": disable_so, "disable_there": disable_there, "disable_weasel": disable_weasel, "disable_adverb": disable_adverb, "disable_wordy": disable_wordy, "disable_cliches": disable_cliches, "disable_frankenword": disable_frankenword }
 
 def check_passive(lineInFile, countInFile, outFile):
     if get_cli_flags()['disable_passive'] == True:
@@ -175,6 +180,21 @@ def check_cliches(lineInFile, countInFile, outFile):
                 with open(outFile, 'a+') as writeFile:
                     writeFile.write("Line " + str(countInFile) + ", contains a cliche: " + str(cliche) + "\n")
 
+def check_frankenword(lineInFile, countInFile, outFile):
+    if get_cli_flags()['disable_frankenword'] == True:
+        return False
+    frankenwords = ['frankenword','selfie','couplie','affluenza','automagical','avgas','backronym','banoffee','bedaffle','beefalo','beerage','beutifantistarific','blurst','bufugly','chunnel','chinglish','cocacolonization','conlang','coopetition','crisitunity','crunk','craptacular','dancercise','deliquid','discustion','disturbia','dramastic','dramedy','ecoteur','edutainment','fantaulous','fanzine','flexicurity','flong','frankenfood','frowcalculation','fugly','grasscycle','herstory','humanure','insinnuendo','intertwingle','intertwangle','mockney','nastranaut','netocracy','oxbridge','parkade','pluot','pomosexual','prosumer','screenager','slanguage','strunk','tanorexia','taardvark','tofurkey']
+    prevword = ""
+    for frankenword in frankenwords:
+        for word in lineInFile.split():
+            if word.lower().strip() in frankenword.lower().strip():
+                if word.lower().strip():
+                    if outFile == False:
+                        print("Line " + str(countInFile) + ", contains a frankenword: " + str(frankenword))
+                    else:
+                        with open(outFile, 'a+') as writeFile:
+                            writeFile.write("Line " + str(countInFile) + ", contains a frankenword: " + str(frankenword) + "\n")
+
 def main():
     inFile = get_cli_flags()['inFile']
     if inFile == False:
@@ -192,6 +212,7 @@ def main():
             check_adverb(line, lineCounter, outFile)
             check_tooWordy(line, lineCounter, outFile)
             check_cliches(line, lineCounter, outFile)
+            check_frankenword(line, lineCounter, outFile)
 
 if __name__ == "__main__":
     main()
