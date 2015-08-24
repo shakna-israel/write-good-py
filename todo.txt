@@ -1,3 +1,2 @@
-(A) 2015-08-22 Optionally disable each check
 (C) 2015-08-22 Convert for loops to list comprehensions?
 (B) 2015-08-24 Test Suite
