@@ -1,8 +1,8 @@
-(C) 2015-08-22 Convert for loops to list comprehensions?
+(A) 2015-08-22 Convert for loops to list comprehensions?
 (B) 2015-08-24 Test Suite
-(D) 2015-08-24 Return index of error found
-(D) 2015-08-24 Check for i before e, except after c, except in some cases
-(D) 2015-08-24 Check for correct semicolon placement
-(D) 2015-08-24 Check for correct comma placement
-(D) 2015-08-24 Check for missing full stops.
-(E) 2015-08-24 Distribute WGP to PyPI
+(C) 2015-08-24 Return index of error found
+(C) 2015-08-24 Check for i before e, except after c, except in some cases
+(C) 2015-08-24 Check for correct semicolon placement
+(C) 2015-08-24 Check for correct comma placement
+(C) 2015-08-24 Check for missing full stops.
+(D) 2015-08-24 Distribute WGP to PyPI
