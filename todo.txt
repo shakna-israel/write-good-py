@@ -6,3 +6,4 @@
 (D) 2015-08-24 Check for correct semicolon placement
 (D) 2015-08-24 Check for correct comma placement
 (D) 2015-08-24 Check for missing full stops.
+(E) 2015-08-24 Distribute WGP to PyPI
