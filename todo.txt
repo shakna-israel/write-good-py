@@ -1,2 +1,8 @@
 (C) 2015-08-22 Convert for loops to list comprehensions?
 (B) 2015-08-24 Test Suite
+(B) 2015-08-24 Add Frankenword module
+(D) 2015-08-24 Return index of error found
+(D) 2015-08-24 Check for i before e, except after c, except in some cases
+(D) 2015-08-24 Check for correct semicolon placement
+(D) 2015-08-24 Check for correct comma placement
+(D) 2015-08-24 Check for missing full stops.
